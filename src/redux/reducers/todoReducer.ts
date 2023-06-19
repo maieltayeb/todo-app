@@ -28,7 +28,8 @@ const todoSlice=createSlice({
         Update_Todo_isDone:(state,action)=>{
                 let updatedTodoIndex= state.findIndex((todo)=>todo.id==action.payload);
                 state[updatedTodoIndex].isDone=!state[updatedTodoIndex].isDone;
-        }
+        },
+   
     }
 })
 

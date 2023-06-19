@@ -30,9 +30,7 @@ const TodoAppPage=()=> {
 
   
   <Typography component="h1" pt={4} variant='h3' >ToDo list</Typography>
- <AddtodoForm></AddtodoForm> 
-
-
+      <AddtodoForm></AddtodoForm> 
  {dataList.length?<TodoList />:<CircularProgress/> }
 
  </Box>

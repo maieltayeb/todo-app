@@ -7,7 +7,7 @@ import {GET_All_Todos, Delete_Todo, Add_Todo,Update_Todo_isDone} from"../reducer
 export const getAllTodos=function(){
     return function(dispatch: (arg0: { payload: Todo[]; type: "todo/GET_All_Todos"; }) => void){
         return (
-        axios.get<Todo[]>('https://todo-app-bf986-default-rtdb.firebaseio.com/todos.json')
+        axios.get<Todo[]>('https://typescripttodo-app-default-rtdb.firebaseio.com/todos.json')
 
         .then((res:any)=>{
                    if(res.status==200){
@@ -41,7 +41,7 @@ export const getAllTodosSucsess=(todos:Todo[])=>{
 export const addTodo=function(newTodo:Todo){
     return function(dispatch: (arg0: { payload: Todo; type: "todo/Add_Todo"; }) => void){
         return(
-            axios.post('https://todo-app-bf986-default-rtdb.firebaseio.com/todos.json',newTodo)
+            axios.post('https://typescripttodo-app-default-rtdb.firebaseio.com/todos.json',newTodo)
             .then((res:any)=>{
            
               const id=res.data.name;
@@ -69,7 +69,7 @@ export const addTodoSuccess=(todo:Todo)=>{
 export const DeleteTodo=function(id: any){
     return function(dispatch: (arg0: { payload: any; type: "todo/Delete_Todo"; }) => void){
         return (
-            axios.delete(`https://todo-app-bf986-default-rtdb.firebaseio.com/todos/${id}.json`)
+            axios.delete(`https://typescripttodo-app-default-rtdb.firebaseio.com/todos/${id}.json`)
             .then((res:any)=>{
               if(res.status === 200) 
               
@@ -91,7 +91,7 @@ export const updateTodo=function(TodoUpdated: { title: any; isDone: boolean; },i
 
     return(
 
-        axios.patch(`https://todo-app-bf986-default-rtdb.firebaseio.com/todos/${id}.json`,TodoUpdated)
+        axios.patch(`https://typescripttodo-app-default-rtdb.firebaseio.com/todos/${id}.json`,TodoUpdated)
         .then((res:any)=>{
           if(res.status === 200) 
           dispatch(Update_Todo_isDone(id));

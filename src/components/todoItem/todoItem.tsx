@@ -7,6 +7,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import {Box, Typography,Divider} from '@mui/material'
 import HistoryIcon from '@mui/icons-material/History';
 import DoneIcon from '@mui/icons-material/Done';
+
 import { AppDispatch } from "../../redux/reduxStore";
 import { Todo } from "../../models/Todo";
 
@@ -47,7 +48,7 @@ return(
 <Divider orientation="vertical" flexItem />
 
  <ToDoInfoDialog selectedTodo={todo} /> 
-
+{/* <EditIcon  onClick={()=>deleteTodoHandler(todo)}/> */}
 <DeleteForeverIcon  color="error" fontSize="large" onClick={()=>deleteTodoHandler(todo)} />
   
 </Box>
