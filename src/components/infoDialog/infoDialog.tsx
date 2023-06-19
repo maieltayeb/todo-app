@@ -40,10 +40,10 @@ function SimpleDialog(props: { onClose: any; selectedValue: any; open: any; }) {
           </ListItem>
           <ListItem >
           
-          <ListItemIcon>
-          <ListItemText primary="created at date :"/>
+          {/* <ListItemIcon> */}
+          {/* <ListItemText primary="created at date :"/>
           </ListItemIcon>
-          <ListItemText primary={selectedValue.createdAtDate} />
+          <ListItemText primary={selectedValue.createdAtDate} /> */}
         
       </ListItem>
       {/* <ListItem >
